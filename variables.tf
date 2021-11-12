@@ -1,6 +1,6 @@
 variable "region" {
   description = "AWS region"
-  default     = "us-west-1"
+  default     = "eu-west-1"
 }
 
 variable "instance_type" {
@@ -13,3 +13,7 @@ variable "instance_name" {
   default     = "Provisioned by Terraform"
 }
 
+variable "CROSS_ACCOUNT_ROLE" {
+  description = "the IAM role that we assume into to deploy"
+  default = "false"
+}

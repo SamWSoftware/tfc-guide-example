@@ -1,5 +1,9 @@
+
 provider "aws" {
   region = var.region
+  assume_role {
+    role_arn     = var.CROSS_ACCOUNT_ROLE
+  }
 }
 
 data "aws_ami" "ubuntu" {
